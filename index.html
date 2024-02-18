@@ -13,42 +13,13 @@
       <nav>
         <div class="navbar bg-base-100">
             <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Item 1</a></li>
-                  <li>
-                    <a>Parent</a>
-                    <ul class="p-2">
-                      <li><a>Submenu 1</a></li>
-                      <li><a>Submenu 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a>Item 3</a></li>
-                </ul>
-              </div>
+              
               <a class="btn btn-ghost text-xl">M-Travel</a>
             </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li><a>Item 1</a></li>
-                <li>
-                  <details>
-                    <summary>Parent</summary>
-                    <ul class="p-2">
-                      <li><a>Submenu 1</a></li>
-                      <li><a>Submenu 2</a></li>
-                    </ul>
-                  </details>
-                </li>
-                <li><a>Item 3</a></li>
-              </ul>
-            </div>
+           
             <div class="navbar-end">
                 
-              <a class="btn">Bus <i class="fa-solid fa-bus"></i></a>
+              <a class="btn text-amber-700">Bus <i class="fa-solid fa-bus"></i></a>
             </div>
           </div>    
       </nav>
@@ -57,7 +28,7 @@
         <h1 class="text-6xl font-extrabold text-amber-600">M-Paribahan</h1>
         <p class="text-white">Yes, you can run unit tests and view the results directly within the app. The 
         integrated testing features allow for a streamlined.</p>
-        <button class="btn bg-amber-800 text-white">Buy Now</button>
+        <a href="#buyticket"><button class="btn bg-amber-800 text-white">Buy Now</button></a>
       </div>
     
     </header>
@@ -78,12 +49,12 @@
             </div>
             <div class="bg-amber-600 flex rounded-md text-white">
               <div class="p-6 border-r-2 border-dotted flex flex-col justify-center items-center">
-                <h1 class="text-3xl font-bold ">15% OFF</h1>
+                <h1 class="text-3xl font-bold ">20% OFF</h1>
                 <h3 class="text-2xl font-bold">on your next purchase</h3>
                 <p>use by January 2024</p>
               </div>
               <div class="p-6 flex flex-col justify-center items-center">
-                <h1 class="text-3xl font-bold">NEW15</h1>
+                <h1 class="text-3xl font-bold">COUPLE20</h1>
                 <p>Coupon Code</p>
               </div>
             </div>
@@ -91,7 +62,7 @@
           <button class="btn bg-amber-600 text-2xl ">See All offer</button>
         </section>
         <!-- Funtional part -->
-        <section class="m-24">
+        <section id="buyticket" class="m-24 border-t-8 border-amber-600 rounded-xl pt-20">
           <div class="flex flex-col justify-center items-center gap-10 ">
             <h1 class="text-3xl font-bold">M-Paribahan</h1>
             <p class="">Yes, you can run unit tests and view the results directly within the app. The 
@@ -135,7 +106,216 @@
               <p>Per seat</p>
             </div>
           </div>
-
+          <!-- seat selection -->
+          <div class="p-6 bg-white rounded-md text-black flex justify-between">
+            <div class="w-[60%] pr-10 border-r-2 border-amber-950 border-dashed">
+              <h1 class="text-2xl font-bold">Select Your Seat</h1>
+              <div class="flex justify-between mt-5 p-5 border-y-2 border-amber-950 border-dashed">
+                <div class="font-bold text-gray-600">
+                  <i class="fa-solid fa-couch"></i> <span> Available</span>
+                </div>
+                <div class="text-amber-800 font-bold">
+                  <i class="fa-solid fa-couch"></i> <span> Selected</span>
+                </div>
+              </div>
+              <div class="flex justify-between">
+                <div></div>
+                <div class=" m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-400"><img class="w-[20px]" src="images/steering-wheel.png" alt=""></div>
+              </div>
+              <div class="flex items-center ">
+              <p class="w-5 h-12 flex justify-center items-center">A</p>
+              <div class="flex justify-between w-full">
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="A1" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">A1</div>
+                    <div onclick="handleTicket()" id="A2" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">A2</div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="A3" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">A3</div>
+                    <div onclick="handleTicket()" id="A4" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">A4</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center ">
+                <p class="w-5 h-12 flex justify-center items-center">B</p>
+                <div class="flex justify-between w-full">
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="B1" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">B1</div>
+                    <div onclick="handleTicket()" id="B2" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">B2</div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="B3" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">B3</div>
+                    <div onclick="handleTicket()" id="B4" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">B4</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center ">
+                <p class="w-5 h-12 flex justify-center items-center">C</p>
+                <div class="flex justify-between w-full">
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="C1" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">C1</div>
+                    <div onclick="handleTicket()" id="C2" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">C2</div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="C3" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">C3</div>
+                    <div onclick="handleTicket()" id="C4" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">C4</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center ">
+                <p class="w-5 h-12 flex justify-center items-center">D</p>
+                <div class="flex justify-between w-full">
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="D1" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">D1</div>
+                    <div onclick="handleTicket()" id="D2" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">D2</div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="D3" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">D3</div>
+                    <div onclick="handleTicket()" id="D4" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">D4</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <p class="w-5 h-12 flex justify-center items-center">E</p>
+                <div class="flex justify-between w-full">
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="E1" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">E1</div>
+                    <div onclick="handleTicket()" id="E2" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">E2</div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="E3" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">E3</div>
+                    <div onclick="handleTicket()" id="E4" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">E4</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <p class="w-5 h-12 flex justify-center items-center">F</p>
+                <div class="flex justify-between w-full">
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="F1" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">F1</div>
+                    <div onclick="handleTicket()" id="F2" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">F2</div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="F3" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">F3</div>
+                    <div onclick="handleTicket()" id="F4" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">F4</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center ">
+                <p class="w-5 h-12 flex justify-center items-center">G</p>
+                <div class="flex justify-between w-full">
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="G1" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">G1</div>
+                    <div onclick="handleTicket()" id="G2" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">G2</div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="G3" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">G3</div>
+                    <div onclick="handleTicket()" id="G4" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">G4</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center ">
+                <p class="w-5 h-12 flex justify-center items-center">H</p>
+                <div class="flex justify-between w-full">
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="H1" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">H1</div>
+                    <div onclick="handleTicket()" id="H2" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">H2</div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="H3" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">H3</div>
+                    <div onclick="handleTicket()" id="H4" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">H4</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <p class="w-5 h-12 flex justify-center items-center">I</p>
+                <div class="flex justify-between w-full">
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="I1" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">I1</div>
+                    <div onclick="handleTicket()" id="I2" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">I2</div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="I3" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">I3</div>
+                    <div onclick="handleTicket()" id="I4" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">I4</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center ">
+                <p class="w-5 h-12 flex justify-center items-center">J</p>
+                <div class="flex justify-between w-full">
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="J1" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">J1</div>
+                    <div onclick="handleTicket()" id="J2" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">J2</div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div onclick="handleTicket()" id="J3" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">J3</div>
+                    <div onclick="handleTicket()" id="J4" class="m-3 w-24 h-12 flex justify-center items-center rounded-md bg-slate-200">J4</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- next option -->
+            <div class="w-[40%] pl-10 ">
+              <h1 class="text-2xl font-bold mb-5 pb-5 border-b-2 border-amber-950 border-dashed">Select Your Seat</h1>
+              <div class="bg-slate-400/30 p-8 rounded-md">
+                <table class=" table w-full">
+                  <thead class="gap-4">
+                    <tr class="text-black">
+                      <th>Seat <span class="px-1 bg-amber-600 rounded-full">0</span></th>
+                      <th>Class</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>A1</td>
+                      <td>Economoy</td>
+                      <td>550</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr class="text-amber-950">
+                      <td>Total Price</td>
+                      <td></td>
+                      <td>1100</td>
+                    </tr>
+                  </tfoot>
+                </table>
+                <div class="my-5">
+                  <label class="input input-bordered flex items-center gap-2 bg-white">
+                    <input type="text" class="grow" placeholder="Have any copupon?" />
+                    <span class="badge badge-info rounded-md p-5">Apply</span>
+                  </label>
+                </div>
+                <div class="flex justify-between text-sm font-bold px-4">
+                  <div>Grand Price</div>
+                  <div>1100</div>
+                </div>
+              </div>
+              <!-- form -->
+              <div class="my-5">
+                <div class="my-5">
+                  <p class="text-xl font-bold pb-3">Passenger Name<sup>*</sup></p>
+                  <input type="text" placeholder="Your Name" class="input input-bordered w-full bg-amber-200/20" />
+                </div>
+                <div class="my-5">
+                  <p class="text-xl font-bold pb-3">Phone Number<sup>*</sup></p>
+                  <input type="number" placeholder="Your Number" class="input input-bordered w-full bg-amber-200/20" />
+                </div>
+                <div class="my-5">
+                  <p class="text-xl font-bold pb-3">Email Id</p>
+                  <input type="email" placeholder="Your email" class="input input-bordered w-full bg-amber-200/20" />
+                </div>
+              </div>
+              <button class="btn bg-amber-900 text-white w-full py-4" type="submit">Next</button>
+              <div>
+                <div class="flex w-full justify-between items-center underline mt-10">
+                  <div><a href="">Terms and Conditions</a></div>
+                  <div><a href="">Cancellation Policy</a></div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
         </section>
     </main>
 </body>
