@@ -61,3 +61,13 @@ function couponPrice(){
       document.getElementById("coupon-price").innerText = document.getElementById("ttl-price").innerText;
    }
 }
+function next(){
+   const name = document.getElementById("name").value;
+   const num = document.getElementById("num").value;
+   const seat = document.getElementById("seat-num").innerText;
+   if (name !== "" && num !== "" && seat > 0) {
+      const myModal = document.getElementById("my_modal_4");
+      myModal.showModal();
+   }
+   
+}

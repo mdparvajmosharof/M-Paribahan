@@ -9,8 +9,8 @@
     <script src="https://kit.fontawesome.com/e0bd03d552.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="min-h-screen m-24">
-      <nav>
+    <header class="min-h-screen m-24 mt-4">
+      <nav id="start">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
               
@@ -291,18 +291,18 @@
               <div class="my-5">
                 <div class="my-5">
                   <p class="text-xl font-bold pb-3">Passenger Name<sup>*</sup></p>
-                  <input type="text" placeholder="Your Name" class="input input-bordered w-full bg-amber-200/20" />
+                  <input id="name" type="text" placeholder="Your Name" class="input input-bordered w-full bg-amber-200/20" />
                 </div>
                 <div class="my-5">
                   <p class="text-xl font-bold pb-3">Phone Number<sup>*</sup></p>
-                  <input type="number" placeholder="Your Number" class="input input-bordered w-full bg-amber-200/20" />
+                  <input id="num" type="number" placeholder="Your Number" class="input input-bordered w-full bg-amber-200/20" />
                 </div>
                 <div class="my-5">
                   <p class="text-xl font-bold pb-3">Email Id</p>
                   <input type="email" placeholder="Your email" class="input input-bordered w-full bg-amber-200/20" />
                 </div>
               </div>
-              <button class="btn bg-amber-900 text-white w-full py-4" type="submit">Next</button>
+              <button  onclick="next()" class="btn bg-amber-900 text-white w-full py-4" type="submit">Next</button>
               <div>
                 <div class="flex w-full justify-between items-center underline mt-10">
                   <div><a href="">Terms and Conditions</a></div>
@@ -312,6 +312,31 @@
             </div>
             
           </div>
+        </section>
+      
+        <section>
+            <dialog id="my_modal_4" class="modal ">
+              <div class="modal-box w-11/12 max-w-5xl flex flex-col items-center justify-center bg-amber-200/20">
+                <div class="card w-[80%] bg-amber-200 shadow-xl">
+                  <figure class="px-10 pt-10">
+                    <img src="images/success.png" alt="Shoes" class="rounded-xl" />
+                  </figure>
+                  <div class=" card-body items-center text-center">
+                    <h1 class="text-3xl font-bold text-amber-800 uppercase">Success</h1>
+                    <h2 class="text-2xl font-bold text-black">Thank you for Booking Our Bus Seats</h2>
+                    <h2 class="text-2xl font-bold text-black">We are working hard to find the best service and deals for you. </h2>
+                    <h2 class="pt-2 text-2xl text-black">Shortly you will find a confirmation in your email.</h2>
+                    
+                  </div>
+                </div>
+                <div class="modal-action flex justify-center ">
+                  <form method="dialog">
+                    <!-- if there is a button, it will close the modal -->
+                    <button class="btn bg-orange-600">CONTINUE</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
         </section>
     </main>
     <script src="js/index.js"></script>
